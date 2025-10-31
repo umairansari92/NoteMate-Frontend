@@ -1,12 +1,92 @@
-# React + Vite
+# NoteMate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NoteMate is a modern note-taking web application built with React that allows users to create, manage, and organize their notes with ease.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📝 Create and manage notes
+- 🔐 User authentication (Login/Signup)
+- 🌓 Dark/Light theme support
+- 🖼️ Image upload functionality
+- 🔒 Protected routes for secure access
+- 📱 Responsive design
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend Framework:** React
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Authentication:** JWT (JSON Web Tokens)
+- **Routing:** React Router
+
+## Project Structure
+
+```
+src/
+├── components/         # Reusable UI components
+├── pages/             # Page components
+├── utils/             # Utility functions
+├── assets/           # Static assets
+└── App.jsx           # Main application component
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/umairansari92/NoteMate-Frontend.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd NoteMate-Frontend
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+The application will be available at `http://localhost:5173`
+
+## Main Components
+
+- `Navbar`: Navigation component with authentication status
+- `ImageUploadBox`: Component for handling image uploads
+- `NoteCards`: Display and manage notes
+- `Toggler`: Theme switching component
+- `ProtectedRoute`: Route wrapper for authenticated pages
+
+## Pages
+
+- `Home`: Landing page
+- `AllNotes`: Display all user notes
+- `Profile`: User profile management
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Author
+
+[Umair Ansari](https://github.com/umairansari92)
