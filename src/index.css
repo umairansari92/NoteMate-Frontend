@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+:root {
+  --bg-light: #ffffff;
+  --text-light: #111;
+  --bg-dark: #0b1220; /* deep slate */
+  --card-dark: #0f172a; /* slate-900 */
+  --elev-dark: #111827; /* gray-900 */
+  --accent: #6366f1; /* indigo-500 */
+  --accent-strong: #4f46e5; /* indigo-600 */
+  --text-dark: #e5e7eb;
+}
+
+[data-theme="light"] {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] {
+  background: radial-gradient(1200px 600px at 20% -10%, #111827 10%, transparent 60%),
+              radial-gradient(1000px 500px at 120% 10%, #0f172a 10%, transparent 60%),
+              var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Smooth theme transition (applies briefly when toggling) */
+.theme-transition *, .theme-transition {
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease, fill 250ms ease, stroke 250ms ease, box-shadow 250ms ease, transform 200ms ease;
+}
+
+.navbar {
+  width: 100%;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Buttons */
+.theme-btn, .logout-btn {
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.logout-btn {
+  background: red;
+  color: white;
+}
+
+/* Hamburger Menu */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background: currentColor;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 180px;
+    background: inherit;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
