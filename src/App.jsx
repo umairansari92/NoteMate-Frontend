@@ -5,7 +5,6 @@ import Profile from './pages/profile'
 import AllNotes from './pages/allnotes'
 import Login from './components/login'
 import Signup from './components/Signup'
-import Notecards from './components/notecards'
 import ProtectedRoute from './components/ProtectedRoute'
 import PublicRoute from './components/PublicRoute'
 
