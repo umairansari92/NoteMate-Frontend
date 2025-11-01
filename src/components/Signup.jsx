@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../utils/api";
-import Navbar from "./Navbar";
 import ImageUploadBox from "./ImageUploadBox";
 
 export default function Signup() {
