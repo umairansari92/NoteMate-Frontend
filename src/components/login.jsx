@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../utils/api";
-import Navbar from "./Navbar";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -41,10 +40,10 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-500 to-indigo-600 dark:from-slate-900 dark:to-slate-800">
-      <Navbar />
+      
       <div className="flex items-center justify-center p-6">
-      <form className="w-full max-w-sm bg-[#0f172a] p-6 rounded-3xl shadow-2xl border border-slate-700" onSubmit={handleSubmit}>
-        <h1 className="text-2xl font-semibold text-white mb-4 text-center">Welcome back</h1>
+      <form className="w-full max-w-sm bg-white dark:bg-slate-900/70 p-6 rounded-3xl shadow-2xl border border-slate-700 transition-colors" onSubmit={handleSubmit}>
+        <h1 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 text-center">Welcome back</h1>
 
         {error && <div className="mb-3 text-sm text-red-200 bg-red-900/30 p-2 rounded">{error}</div>}
 
@@ -75,7 +74,7 @@ export default function Login() {
           {loading ? "Logging in..." : "Login"}
         </button>
 
-        <p className="mt-4 text-center text-sm text-white/80">
+  <p className="mt-4 text-center text-sm text-gray-700 dark:text-white/80">
           Don’t have an account?{" "}
           <span onClick={() => navigate("/signup")} className="text-white underline cursor-pointer">
             Sign up

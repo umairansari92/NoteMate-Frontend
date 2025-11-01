@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../utils/api";
-import Navbar from "./Navbar";
 import ImageUploadBox from "./ImageUploadBox";
 
 export default function Signup() {
@@ -72,13 +71,12 @@ export default function Signup() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-500 to-indigo-600 dark:from-slate-900 dark:to-slate-800">
-      <Navbar />
       <div className="flex items-center justify-center p-6">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-[#0f172a] p-6 rounded-3xl shadow-2xl border border-slate-700"
+        className="w-full max-w-md bg-white dark:bg-slate-900/70 p-6 rounded-3xl shadow-2xl border border-slate-700 transition-colors"
       >
-        <h1 className="text-2xl font-semibold text-white mb-4 text-center">
+        <h1 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
           Create your account
         </h1>
 
@@ -151,7 +149,7 @@ export default function Signup() {
           {loading ? "Creating account..." : "Sign up"}
         </button>
 
-        <p className="mt-4 text-center text-sm text-white/80">
+  <p className="mt-4 text-center text-sm text-gray-700 dark:text-white/80">
           Already have an account?{" "}
           <span
             onClick={() => navigate("/login")}

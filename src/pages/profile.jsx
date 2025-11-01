@@ -20,7 +20,7 @@ export default function Profile() {
       <div className="max-w-3xl mx-auto px-6 py-6">
         <h1 className="text-2xl font-semibold mb-6">Profile</h1>
 
-        <div className="bg-[#0f172a] rounded-2xl shadow p-6 flex gap-6 items-center border border-slate-700">
+  <div className="bg-white/80 dark:bg-slate-900/70 backdrop-blur rounded-2xl shadow p-6 flex gap-6 items-center border border-gray-100 dark:border-slate-800 text-gray-900 dark:text-slate-100 transition-colors">
           <img
             src={user.profileImage || '/avatar-placeholder.png'}
             alt="Profile"
@@ -37,8 +37,8 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-[#0f172a] rounded-xl p-5 shadow border border-slate-700">
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white/80 dark:bg-slate-900/70 backdrop-blur rounded-xl p-5 shadow border border-gray-100 dark:border-slate-800 text-gray-900 dark:text-slate-100 transition-colors">
             <h2 className="font-semibold mb-3">Account Details</h2>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between"><span className="text-gray-500">First name</span><span>{first || '—'}</span></div>
@@ -49,7 +49,7 @@ export default function Profile() {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-5 shadow">
+          <div className="bg-white/80 dark:bg-slate-900/70 backdrop-blur rounded-xl p-5 shadow border border-gray-100 dark:border-slate-800 text-gray-900 dark:text-slate-100 transition-colors">
             <h2 className="font-semibold mb-3">Security</h2>
             <p className="text-sm text-gray-500">You are logged in. Keep your account secure by using a strong password.</p>
           </div>
