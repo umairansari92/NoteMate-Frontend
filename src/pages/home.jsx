@@ -14,7 +14,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const token = localStorage.getItem("token");
-  const API = "http://localhost:5000/notes";
+  const API = "https://note-mate-backend-six.vercel.app/notes";
 
   const storedUser = (() => {
     try {
@@ -177,8 +177,8 @@ export default function Home() {
               </div>
             ) : (
               <>
-                <h3 className="font-bold text-lg text-gray-900 dark:text-slate-100 break-words">{note.title}</h3>
-                <p className="text-gray-700 dark:text-slate-300 mt-1 break-words">
+                <h3 className="font-bold text-lg text-gray-900 dark:text-slate-100 wrap-break-word">{note.title}</h3>
+                <p className="text-gray-700 dark:text-slate-300 mt-1 wrap-break-word">
                   {note.content}
                 </p>
               </>

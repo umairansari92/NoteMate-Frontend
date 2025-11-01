@@ -14,7 +14,7 @@ const AllNotes = () => {
 	const [editContent, setEditContent] = useState('')
 
 	const token = localStorage.getItem('token')
-	const API = 'http://localhost:5000/notes'
+	const API = 'https://note-mate-backend-six.vercel.app/notes'
 
 	async function fetchNotes() {
 		setLoading(true)
@@ -123,8 +123,8 @@ const AllNotes = () => {
 								</div>
 							) : (
 								<>
-									<h3 className="font-bold text-lg text-gray-900 dark:text-slate-100 break-words">{note.title}</h3>
-									<p className="text-gray-700 dark:text-slate-300 mt-1 whitespace-pre-wrap break-words">{note.content}</p>
+									<h3 className="font-bold text-lg text-gray-900 dark:text-slate-100 wrap-break-word">{note.title}</h3>
+									<p className="text-gray-700 dark:text-slate-300 mt-1 whitespace-pre-wrap wrap-break-word">{note.content}</p>
 								</>
 							)}
 
