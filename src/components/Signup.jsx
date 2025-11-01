@@ -71,94 +71,102 @@ export default function Signup() {
 
   return (
     <div className="min-h-screen bg-linear-to-br from-sky-500 to-indigo-600 dark:from-slate-900 dark:to-slate-800">
-      <div className="flex items-center justify-center p-6">
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-md bg-white dark:bg-slate-900/70 p-6 rounded-3xl shadow-2xl border border-slate-700 transition-colors"
-      >
-        <h1 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
-          Create your account
-        </h1>
-
-        {error && (
-          <div className="mb-4 text-sm text-red-200 bg-red-900/30 p-2 rounded">
-            {error}
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 gap-3">
-          <input
-            name="fname"
-            value={form.fname}
-            onChange={handleChange}
-            placeholder="First name"
-            className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
-            required
-          />
-          <input
-            name="lname"
-            value={form.lname}
-            onChange={handleChange}
-            placeholder="Last name"
-            className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
-            required
-          />
-          <input
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="Email"
-            type="email"
-            className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
-            required
-          />
-          <input
-            name="password"
-            value={form.password}
-            onChange={handleChange}
-            placeholder="Password"
-            type="password"
-            className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
-            required
-          />
-
-         
-          <input
-            type="number"
-            name="age"
-            value={form.age}
-            onChange={handleChange}
-            placeholder="Enter your age"
-            min="10"
-            max="100"
-            className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
-            required
-          />
-        </div>
-
-        {/* Upload box at bottom like Saylani */}
-        <div className="mt-4">
-          <ImageUploadBox preview={preview} onChange={handleFileChange} />
-        </div>
-
+      <div className="flex items-center gap-3">
+        {/* Theme Toggle */}
         <button
-          type="submit"
-          disabled={loading}
-          className="mt-5 w-full py-3 rounded-lg bg-yellow-400 text-black font-semibold hover:brightness-95 transition"
+          onClick={toggleTheme}
+          className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors"
         >
-          {loading ? "Creating account..." : "Sign up"}
+          {theme === "dark" ? <FiSun /> : <FiMoon />}
         </button>
+      </div>
+      <div className="flex items-center justify-center p-6">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-md bg-white dark:bg-slate-900/70 p-6 rounded-3xl shadow-2xl border border-slate-700 transition-colors"
+        >
+          <h1 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
+            Create your account
+          </h1>
 
-  <p className="mt-4 text-center text-sm text-gray-700 dark:text-white/80">
-          Already have an account?{" "}
-          <span
-            onClick={() => navigate("/login")}
-            className="text-white underline cursor-pointer"
+          {error && (
+            <div className="mb-4 text-sm text-red-200 bg-red-900/30 p-2 rounded">
+              {error}
+            </div>
+          )}
+
+          <div className="grid grid-cols-1 gap-3">
+            <input
+              name="fname"
+              value={form.fname}
+              onChange={handleChange}
+              placeholder="First name"
+              className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
+              required
+            />
+            <input
+              name="lname"
+              value={form.lname}
+              onChange={handleChange}
+              placeholder="Last name"
+              className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
+              required
+            />
+            <input
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Email"
+              type="email"
+              className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
+              required
+            />
+            <input
+              name="password"
+              value={form.password}
+              onChange={handleChange}
+              placeholder="Password"
+              type="password"
+              className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
+              required
+            />
+
+            <input
+              type="number"
+              name="age"
+              value={form.age}
+              onChange={handleChange}
+              placeholder="Enter your age"
+              min="10"
+              max="100"
+              className="w-full p-3 rounded-lg bg-white/80 placeholder-gray-600 outline-none"
+              required
+            />
+          </div>
+
+          {/* Upload box at bottom like Saylani */}
+          <div className="mt-4">
+            <ImageUploadBox preview={preview} onChange={handleFileChange} />
+          </div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="mt-5 w-full py-3 rounded-lg bg-yellow-400 text-black font-semibold hover:brightness-95 transition"
           >
-            Login
-          </span>
-        </p>
-      </form>
+            {loading ? "Creating account..." : "Sign up"}
+          </button>
+
+          <p className="mt-4 text-center text-sm text-gray-700 dark:text-white/80">
+            Already have an account?{" "}
+            <span
+              onClick={() => navigate("/login")}
+              className="text-white underline cursor-pointer"
+            >
+              Login
+            </span>
+          </p>
+        </form>
       </div>
     </div>
   );

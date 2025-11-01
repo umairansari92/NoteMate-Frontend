@@ -128,7 +128,7 @@ export default function Home() {
       </h2>
 
       {/* Input Box */}
-  <div className="bg-white dark:bg-slate-900/70 border border-slate-700 p-5 rounded-xl shadow-lg space-y-3 mb-6 transition-colors ring-1 ring-indigo-500/5">
+  <div className="bg-white/80 dark:bg-slate-900/70 backdrop-blur rounded-xl p-5 shadow-lg space-y-3 mb-6 border border-gray-100 dark:border-slate-800 text-gray-900 dark:text-slate-100 transition-colors ring-1 ring-indigo-500/5">
         <input
           type="text"
           placeholder="Note title"
@@ -158,7 +158,7 @@ export default function Home() {
         {notes.map(note => (
           <div
             key={note._id}
-            className="bg-white dark:bg-slate-900/70 border border-slate-700 p-5 rounded-2xl shadow-lg ring-1 ring-indigo-500/5 hover:ring-indigo-500/15 transition-all hover:shadow-xl hover:-translate-y-0.5"
+            className="bg-white/80 dark:bg-slate-900/70 backdrop-blur border border-gray-100 dark:border-slate-800 p-5 rounded-2xl shadow-lg ring-1 ring-indigo-500/5 hover:ring-indigo-500/15 transition-colors hover:shadow-xl hover:-translate-y-0.5 text-gray-900 dark:text-slate-100"
           >
             {editingId === note._id ? (
               <div className="space-y-2">
