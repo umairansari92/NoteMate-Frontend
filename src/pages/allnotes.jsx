@@ -105,7 +105,7 @@ const AllNotes = () => {
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 					{filteredNotes.map(note => (
-						<div key={note._id} className="bg-white dark:bg-slate-900/70 border border-slate-700 p-5 rounded-2xl shadow-lg ring-1 ring-indigo-500/5 hover:ring-indigo-500/15 transition-all hover:shadow-xl hover:-translate-y-0.5">
+						<div key={note._id} className="bg-white/80 dark:bg-slate-900/70 backdrop-blur border border-gray-100 dark:border-slate-800 p-5 rounded-2xl shadow-lg ring-1 ring-indigo-500/5 hover:ring-indigo-500/15 transition-colors hover:shadow-xl hover:-translate-y-0.5 text-gray-900 dark:text-slate-100">
 							{editingId === note._id ? (
 								<div className="space-y-2">
 									<input
