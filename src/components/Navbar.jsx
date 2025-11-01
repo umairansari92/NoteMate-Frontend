@@ -16,7 +16,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="w-full bg-white/80 dark:bg-slate-900/70 backdrop-blur border-b border-gray-100 dark:border-slate-800 text-gray-900 dark:text-slate-100 shadow-sm px-6 py-3 flex items-center justify-between transition-colors">
+    <nav className="relative w-full bg-white/80 dark:bg-slate-900/70 backdrop-blur border-b border-gray-100 dark:border-slate-800 text-gray-900 dark:text-slate-100 shadow-sm px-6 py-3 flex items-center justify-between transition-colors z-[100]">
 
       {/* Logo */}
       <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate("/")}> 
@@ -62,7 +62,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <ul className="absolute top-16 left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur z-1 shadow-md py-4 flex flex-col items-center gap-5 md:hidden border-b border-gray-100 dark:border-slate-800 text-gray-900 dark:text-white transition-colors">
+        <ul className="fixed top-16 left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur z-[999] shadow-md py-4 flex flex-col items-center gap-5 md:hidden border-b border-gray-100 dark:border-slate-800 text-gray-900 dark:text-white transition-colors">
           <Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
           <Link to="/profile" onClick={() => setIsMenuOpen(false)}>Profile</Link>
           <Link to="/all-notes" onClick={() => setIsMenuOpen(false)}>All Notes</Link>
